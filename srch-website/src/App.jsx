@@ -1,5 +1,6 @@
 // src/App.jsx
-import "./App.css";
+import "./styles/App.css";
+
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import theme from "./theme";
 import { useEffect } from "react";

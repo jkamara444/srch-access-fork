@@ -1,3 +1,4 @@
+@import url("./theme/variables.css");
 /* =============================================================================
    ContentsSidebar.css  —  scoped styles for the left contents rail only
    ========================================================================== */
@@ -7,17 +8,6 @@
   /* Layout */
   --navbar-height: var(--navbar-height, 80px);
   --left-sidebar-width: var(--left-sidebar-width, 250px);
-
-  /* Sidebar palette (Figma) */
-  --cs-brown: #531C00;
-  /* active pill background */
-  --cs-text: #4F3629;
-  /* default text in rail */
-  --cs-bg: rgba(251, 251, 250, 1);
-  --cs-active: #e6e2dd;
-  /* active section row background */
-  --cs-divider: #c7beb5;
-  /* vertical 1px divider on the right edge */
 
   /* Motion */
   --cs-ease: 180ms ease;

@@ -1,3 +1,4 @@
+@import './theme/variables.css';
 /* ============================================================================
    0. DESIGN TOKENS
    ----------------------------------------------------------------------------
@@ -6,63 +7,23 @@
 
 :root {
 
-  --color-text: #1a1a1a;
-  /* Card + grid geometry */
+  /* size variables */
   --ack-card-width: 290px;
-  /* EXACT card width from Figma */
   --ack-photo-width: 290px;
-  /* EXACT photo width */
   --ack-photo-height: 302px;
-  /* EXACT photo height */
   --ack-grid-col-gap: 10px;
-  /* column gap */
   --ack-grid-row-gap: 10px;
-  /* row gap */
   --ack-radius: 6px;
-
-  /* Typography + colors */
-  --ack-brand-header: #531C00;
-  --ack-text: #1a1a1a;
-  --ack-muted: #00000085;
-  --ack-divider: rgba(96, 70, 58, 1);
 
   /* Icon buttons */
   --ack-icon-size: 32px;
-  --ack-icon-ring: #5a2d0c;
-  --ack-email-hover-bg: var(--ack-icon-ring);
-  --ack-email-hover-color: #fff;
-  --ack-bg-hover: #9d001249;
-
 
   /* Hero */
   --ack-upper-height: 75vh;
   --ack-hero-paddingX: 13.22vw;
-
-  --bg-color: #fff;
 }
 
 
-/* Dark mode colors */
-.chakra-ui-dark,
-[data-theme="dark"] {
-  color-scheme: dark;
-
-  /* Dark mode colors with green theme */
-  --color-text: #e0e0e0;
-  --header-text-color: #e0e0e0;
-  --sub-header-text-color: #e0e0e0;
-  --ack-email-hover-bg: rgba(40, 76, 40, 0.25);
-  --ack-email-hover-color: var(--ack-brand-header);
-  --sidebar-phrase-color: #A5D8AE;
-  --sidebar-phrase-clicked: #263A26;
-  --sidebar-link-color: #A5D8AE;
-
-  --bg-color: #0E0E0E;
-  --ack-text: #e0e0e0;
-  --ack-brand-header: #A5D8AE;
-  --ack-bg-hover: #263A26;
-
-}
 
 /* ============================================================================
    1. HERO BANNER
@@ -112,7 +73,7 @@
   font-weight: 700;
   font-size: 84px;
   line-height: 100px;
-  color: var(--ack-text);
+  color: var(--co);
 
 }
 
@@ -131,7 +92,7 @@
   font-family: "Be Vietnam Pro", sans-serif;
   font-size: 18px;
   line-height: 28px;
-  color: var(--ack-text);
+  color: var(--color-text);
 }
 
 
@@ -143,7 +104,7 @@
   margin-top: calc(var(--ack-upper-height) - 5vh);
   position: relative;
   z-index: 1;
-  background: var(--bg-color);
+  background: var(--color-bg);
   padding: 72px 200px;
 }
 
@@ -219,8 +180,8 @@
   display: block;
 
   /* 🔒 The mask: this is the Figma template frame */
-  -webkit-mask-image: url("../src/assets/Photo.png");
-  mask-image: url("../src/assets/Photo.png");
+  -webkit-mask-image: url("../assets/Photo.png");
+  mask-image: url("../assets/Photo.png");
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
   -webkit-mask-repeat: no-repeat;
@@ -236,8 +197,8 @@
   background: #d9d9d9;
   border-radius: var(--ack-radius);
 
-  -webkit-mask-image: url("../src/assets/Photo.png");
-  mask-image: url("../src/assets/Photo.png");
+  -webkit-mask-image: url("../assets/Photo.png");
+  mask-image: url("../assets/Photo.png");
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
   -webkit-mask-repeat: no-repeat;
@@ -263,13 +224,13 @@
 .ack-card-fullname {
   font-size: 18px;
   font-weight: 600;
-  color: var(--ack-brand-header);
+  color: var(--color-main);
   line-height: 22px;
 }
 
 .ack-card-pronouns {
   font-size: 15px;
-  color: var(--ack-muted);
+  color: var(--color-text-muted);
 }
 
 .ack-card-subinfo {
@@ -294,11 +255,11 @@
   width: var(--ack-icon-size);
   height: var(--ack-icon-size);
   border-radius: 50%;
-  border: 1px solid var(--ack-brand-header);
+  border: 1px solid var(--color-main);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--ack-brand-header);
+  color: var(--color-main);
   background: transparent;
   cursor: pointer;
   text-decoration: none;
@@ -309,11 +270,11 @@
 
 /* Light mode hover effect */
 .ack-icon-btn:hover {
-  background-color: var(--ack-bg-hover);
+  background-color: var(--color-main);
 }
 
 .ack-icon-btn:hover svg {
-  color: var(--bg-color);
+  color: var(--color-bg);
 }
 
 .ack-icon-btn:active {

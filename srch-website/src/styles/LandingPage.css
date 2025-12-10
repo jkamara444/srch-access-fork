@@ -4,52 +4,18 @@
    These define app-wide rendering and color rules.
    Combined index.css (old + new)
    ========================================================================== */
-
+@import "./theme/variables.css";
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap");
 
 /* --------------------------------------------------------------------------
    Root Design Tokens & Theme Variables
    -------------------------------------------------------------------------- */
 :root {
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
   font-synthesis: none;
   padding: 0rem;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* ------------------------------------------------------------------------
-     🎨 Design Tokens — Base Color System
-     ------------------------------------------------------------------------ */
-
-  --color-text: #1a1a1a;
-  --color-text-hover: #9d0013;
-  --color-text-accent: #7a000f;
-  --color-text-muted: #555;
-  --color-bg: #ffffff;
-  --sidebar-bg: #ffffff;
-  --color-bg-alt: #f8f9fa;
-  --color-border: #e0d7ce;
-  /* from new theme */
-  --color-accent: #7b4b24;
-  /* new accent color */
-  --color-accent-light: #f3ece6;
-  --results-bg: var(--color-bg-alt);
-
-
-  --topic-color-bg: #ffffff;
-  --topic-color-outline: #755543;
-  --button-outline: #531C00;
-  --topic-card-hover: #C90000;
-  --connect-link: #9D0013;
-  --connect-link-hover: #7a000f;
-  --learn-more-hover-bg: rgba(83, 28, 0, 0.05);
-  --learn-more-hover-outline: rgba(83, 28, 0, 0.4);
-
-  /* ------------------------------------------------------------------------
-    Design Tokens — Text Sizes and Weights
------------------------------------------------------------------------- */
 
   --x-small-text: 16px;
   --small-text: 18px;
@@ -60,9 +26,6 @@
   --title-weight: 500;
   --sub-weight: 400;
 
-  /* ------------------------------------------------------------------------
-     🎨 Design Tokens —  Fonts
-     ------------------------------------------------------------------------ */
   --content-font: "Be Vietnam Pro", sans-serif;
   --title-font: "Funnel Sans", sans-serif;
   --title-weight: 500;
@@ -76,51 +39,6 @@
   --content-width: 627px;
 }
 
-
-/* Dark mode colors */
-.chakra-ui-dark,
-[data-theme="dark"] {
-  color-scheme: dark;
-  --learn-more-hover-bg: rgba(40, 76, 40, 0.25);
-  --learn-more-hover-outline: #284C28;
-
-  /* Dark mode colors with green theme */
-  --color-text: #e0e0e0;
-  --color-text-muted: #b0b0b0;
-  --color-bg: #0E0E0E;
-  --color-bg-alt: #252525;
-  --color-border: #404040;
-  --color-accent: #263A26;
-  --color-accent-light: #1a251a;
-  --color-accent-hover: #A5D8AE;
-  --connect-link: #A5D8AE;
-  --connect-link-hover: #284C28;
-  --results-bg: #263A26;
-
-
-  --srch-brown: #263A26;
-  --sidebar-bg: #1e1e1e;
-
-  --cs-brown: #263A26;
-  --cs-text: #e0e0e0;
-  --cs-bg: #1e1e1e;
-  --cs-active: #2a3a2a;
-  --cs-divider: #404040;
-  --topic-color-bg: #181818;
-  --topic-color-outline: #005721;
-  --topic-card-hover: #439B4C;
-
-
-  --navbar-bg: #181818;
-  --navbar-border: #404040;
-  --navbar-shadow: rgba(0, 0, 0, 0.3);
-  --dropdown-bg: #2d2d2d;
-  --icon-color: #e0e0e0;
-  --search-bg: #2d2d2d;
-  --search-result-hover: rgba(165, 216, 174, 0.1);
-  --button-outline: #284C28;
-
-}
 
 body,
 html {
@@ -156,7 +74,7 @@ html {
 }
 
 .background-gradient {
-  background-image: url("../src/assets/landing-page-background-gradient.png");
+  background-image: url("../assets/landing-page-background-gradient.png");
 }
 
 .upper-content {
@@ -172,7 +90,7 @@ html {
   align-items: flex-start;
   gap: var(--medium-gap);
   z-index: 0;
-  background-image: url("../src/assets/landing-page-background-gradient.png");
+  background-image: url("../assets/landing-page-background-gradient.png");
   background-size: cover;
   background-position: left center;
   background-repeat: no-repeat;
@@ -181,7 +99,7 @@ html {
 
 .chakra-ui-dark .upper-content,
 [data-theme="dark"] .upper-content {
-  background-image: url("../src/assets/landing-page-background-dark.png");
+  background-image: url("../assets/landing-page-background-dark.png");
 }
 
 .chakra-ui-dark .topic-card img,
@@ -223,7 +141,7 @@ html {
   margin-top: 18vh;
   flex-direction: column;
   justify-content: center;
-  padding-left: calc((450/1512)*100vw);
+  padding-left: calc((455 / 1512) * 100vw);
   align-items: center;
   gap: var(--small-gap);
   display: flex;
@@ -243,7 +161,9 @@ html {
     align-items: center;
     background-position: left center;
     padding-left: 0;
-    padding-right: 0;
+  }
+  .upper-text-section {
+      padding-left: 0;
   }
 }
 
@@ -255,6 +175,15 @@ html {
   .root {
     --upper-content-height: 85vh;
   }
+
+  .upper-text-section { 
+    padding-left: calc((455 / 1512) * 100vw);
+  }
+}
+
+.intro-text,
+.website-title {
+  transition: width 0.3s ease, margin 0.3s ease, padding 0.3s ease;
 }
 
 .upper-content {
@@ -267,7 +196,7 @@ html {
 }
 
 .website-title {
-  font-size: clamp(2rem, 6vw, 80px);
+  font-size: 48px;
   width: 455px;
   height: 200px;
   justify-content: center;
@@ -280,6 +209,10 @@ html {
   white-space: normal;
   overflow-wrap: normal;
   word-break: keep-all;
+}
+
+#about-title {
+  height: 300px;
 }
 
 .info-section {
@@ -359,7 +292,6 @@ html {
   display: inline-flex;
 }
 
-
 .topic-card {
   width: auto;
   height: auto;
@@ -369,7 +301,7 @@ html {
   align-items: center;
   gap: 24px;
   padding: 24px;
-  background: var(--topic-color-bg);
+  background: var(--topic-card-color-bg);
   border-radius: 16px;
   border: none;
   outline: 1px solid var(--topic-color-outline);
@@ -608,14 +540,6 @@ html {
   outline-color: var(--learn-more-hover-outline);
 }
 
-/* Dark mode hover styles */
-.chakra-ui-dark .learn-more-button:hover,
-[data-theme="dark"] .learn-more-button:hover {
-  background: #284C28;
-  /* Dark green background in dark mode */
-  outline-color: #284C28;
-}
-
 /* Make sure the arrow stays white on hover in dark mode */
 .chakra-ui-dark .learn-more-button:hover img,
 [data-theme="dark"] .learn-more-button:hover img {
@@ -763,6 +687,10 @@ html {
   color: var(--connect-link);
 }
 
+.connect-link:hover {
+  color: var(--connect-link-hover);
+}
+
 /* Feedback Contact */
 .feedback-contact {
   color: var(--color-text);
@@ -802,7 +730,6 @@ html {
   display: flex;
   flex-direction: column;
   gap: 10px;
-
 }
 
 .modules-section-primer-footer {
@@ -916,7 +843,7 @@ html {
 }
 
 .module-link-primer-footer:hover {
-  color: var(--navbar-link-hover, #9d0013);
+  color: var(--connect-link);
 }
 
 /* Feedback Contact */
@@ -967,5 +894,4 @@ html {
   .upper-content {
     left: -75px;
   }
-
 }

@@ -22,7 +22,7 @@ import { getSections, getSubsections } from "../util/MarkdownRenderer";
 import { NavSearchBar } from "../components/NavSearchBar";
 import logoLight from "../assets/logo.png";
 import logoDark from "../assets/logo-dark.png";
-import "../ContentPage.css";
+import "../styles/ContentPage.css";
 
 function NavBar({ className = "" }) {
   const location = useLocation();

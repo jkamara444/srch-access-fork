@@ -1,3 +1,5 @@
+@import './theme/variables.css';
+
 /* ============================================================================
    About.css
    ----------------------------------------------------------------------------
@@ -9,21 +11,6 @@
    • Typography + section layout
    ============================================================================ */
 
-:root {
-  --color-text: #1a1a1a;
-  --bg-color: #fff;
-  --section-bg: #fff;
-  --divider-color: rgba(90, 45, 0, 0.5);
-}
-
-/* Dark mode colors */
-[data-theme="dark"] {
-  color-scheme: dark;
-  --color-text: #e0e0e0;
-  --bg-color: #0E0E0E;
-  --section-bg: #0E0E0E;
-  --divider-color: rgba(200, 200, 200, 0.2);
-}
 
 /* ============================================================================
    1. HERO BANNER (full-screen, fixed)
@@ -94,7 +81,7 @@
   position: relative;
   z-index: 1;
 
-  background: var(--section-bg);
+  background: var(--bg-color);
   padding: 72px 200px;
 }
 
@@ -142,7 +129,7 @@
   width: 90%;
   max-width: 900px;
   height: 2px;
-  background: var(--divider-color);
+  background: var(--divider-line-color);
   margin: 64px auto;
   position: relative;
   left: 0;

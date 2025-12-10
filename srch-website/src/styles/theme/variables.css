@@ -1,0 +1,118 @@
+/* src/styles/theme/variables.css */
+:root {
+    /* ===== Color System ===== */
+    /* Base Colors */
+    --color-bg: #ffffff;
+    --divider-line-color: #5A2D00;
+
+    --color-text: #1a1a1a;
+    --color-text-muted: rgba(0, 0, 0, 0.52);
+    --header-text-color: #531c00;
+    --sub-header-text-color: #7b4b24;
+  
+    /* Theme Colors */
+    --color-main: #531c00;
+    --color-accent: #7b4b24;
+    --color-accent-light: #f3ece6;
+
+    /* Landing Page Specific Colors */
+    --topic-card-color-bg: #ffffff;
+    --topic-color-outline: #755543;
+    --topic-card-hover: #C90000;
+
+    /* Learn More Button */
+    --button-outline: rgba(83, 28, 0, 0.25);
+    --learn-more-hover-bg: rgba(229, 178, 178, 0.5);
+    --learn-more-hover-outline: #9D0013;
+
+    /* Connect Link */
+    --connect-link: #9D0013;
+    --connect-link-hover: #7a000f;
+
+    /* Content Page */
+    --sidebar-phrase-clicked-active: #9D0039;
+    --color-bg-alt: #f8f9fa;
+
+    /* Mark */
+    --mark-bg: #f3ece6;
+    --mark-color: #9D0039;
+
+    /* Sidebars */
+    --cs-brown: #531c00;
+    --cs-text: #4f3629;
+    --cs-bg: rgba(251, 251, 250, 1);
+    --cs-active: #e6e2dd;
+    --cs-divider: #c7beb5;
+    --sidebar-phrase-text-color: #ffffff;
+
+    /* Navbar */
+    --search-icon-color: #0E0E0E;
+    --navbar-border: #e0d7ce;
+    --navbar-bg: var(--color-bg);
+    --navbar-shadow: rgba(0, 0, 0, 0.1);
+    --dropdown-bg: var(--color-bg-alt);
+    --icon-color: var(--color-text);
+    --search-bg: var(--color-bg-alt);
+    --search-result-hover: #d8d7d741;
+}
+
+/* ===== Dark Mode Overrides ===== */
+.chakra-ui-dark,
+[data-theme="dark"] {
+    
+    --color-bg: #0E0E0E;
+    --divider-line-color: #4E7455;
+
+    --color-text: #e0e0e0;
+    --color-text-muted: rgba(255, 255, 255, 0.52);
+    --header-text-color: #e0e0e0;
+    --sub-header-text-color: #e0e0e0;
+
+    /* Theme Colors */
+    --color-main: #A5D8AE;
+    --color-accent: #263A26;
+    --color-accent-light: #1a251a;
+
+
+    /* Landing Page Specific Colors */
+    --topic-card-color-bg: #181818;
+    --topic-color-outline: #005721;
+    --topic-card-hover: #439B4C;
+
+    /* Learn More Button */
+    --button-outline: #284c287e;
+    --learn-more-hover-bg: rgba(40, 76, 40, 0.5);
+    --learn-more-hover-outline: #284c28;
+
+    /* Connect Link */
+    --connect-link: #A5D8AE;
+    --connect-link-hover: #284C28;
+
+    /* Content Page */
+    --sidebar-phrase-clicked-active: var(--learn-more-hover-bg);
+    --color-bg-alt: #252525;
+
+    /* Mark */
+    --mark-bg: #556d596d;
+    --mark-color: #e0e0e0;
+
+    /* Sidebars */
+    --cs-brown:#263A26;
+    --cs-text: #e0e0e0;
+    --cs-bg: #1e1e1e;
+    --cs-active: #2a3a2a;
+    --cs-divider: #404040;
+    --sidebar-phrase-text-color: #A5D8AE;
+
+    /* Navbar */
+    --search-icon-color: #ffffff;
+    --navbar-border: #404040;
+    --navbar-bg: #252525;
+    --navbar-border: #404040;
+    --navbar-shadow: rgba(0, 0, 0, 0.3);
+    --dropdown-bg: #2d2d2d;
+    --icon-color: #e0e0e0;
+    --search-bg: #2d2d2d;
+    --search-result-hover: rgba(165, 216, 174, 0.1);
+
+}

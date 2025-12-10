@@ -8,7 +8,7 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Funnel+Sans:wght@400;500;600;700&display=swap");
-
+@import url("./theme/variables.css");
 /* --------------------------------------------------------------------------
    Root Design Tokens & Theme Variables
    -------------------------------------------------------------------------- */
@@ -29,108 +29,11 @@
   --navbar-height: 80px;
   /* unified baseline */
   --left-sidebar-width: var(--left-sidebar-width, 250px);
-
-  /* Search icon colors */
-  --search-icon-color: #ffffff;
-  --search-icon-hover: #A5D8AE;
-  --sidebar-phrase-text-color: #ffffff;
-
-  /* Mark element colors */
-  --mark-bg: var(--color-accent-light);
-  --mark-color: #9D0039;
-  --case-studies-numbered-list-color: #9D0039;
-  /* Colors / theme */
-  --color-text: #1a1a1a;
-  --header-text-color: #531c00;
-  --sub-header-text-color: #7b4b24;
-  --sidebar-phrase-color: #531c00;
-  --sidebar-link-color: #9D0039;
-  --navbar-link-hover: #9D0039;
-  --results-bg: #9D0039;
-
-  --sidebar-phrase-clicked: #531c00;
-  --sidebar-phrase-clicked-active: #9D0039;
-  --sidebar-icon-color: #9D0039;
-  --color-text-muted: #555;
-  --color-bg: #ffffff;
-  --color-bg-alt: #f8f9fa;
-  --color-border: #e0d7ce;
-  --color-main: #531c00;
-  --color-accent: #7b4b24;
-  --color-accent-light: #f3ece6;
-  --color-accent-hover: #531c00;
-
-  --space-lg: 400px;
-  --srch-brown: #531c00;
-  --sidebar-bg: rgba(251, 251, 250, 1);
-
-  /* Shared sidebar palette (Figma) */
-  --cs-brown: #531c00;
-  --cs-text: #4f3629;
-  --cs-bg: rgba(251, 251, 250, 1);
-  --cs-active: #e6e2dd;
-  --cs-divider: #c7beb5;
-
-  /* light mode specific variables */
-  --navbar-bg: var(--color-bg);
-  --navbar-border: var(--color-border);
-  --navbar-shadow: rgba(0, 0, 0, 0.1);
-  --dropdown-bg: var(--color-bg-alt);
-  --icon-color: var(--color-text);
-  --search-bg: var(--color-bg-alt);
-  --search-result-hover: #d8d7d741;
-
+  --space-lg: 400px;  
   /* Motion */
   --cs-ease: 180ms ease;
 }
 
-/* Dark mode colors */
-[data-theme="dark"] {
-  color-scheme: dark;
-
-  /* Dark mode colors with green theme */
-  --color-text: #e0e0e0;
-  --header-text-color: #e0e0e0;
-  --sub-header-text-color: #e0e0e0;
-  --sidebar-phrase-color: #A5D8AE;
-  --sidebar-icon-color: #A5D8AE;
-  --sidebar-phrase-clicked-active: #263A26;
-  --sidebar-link-color: #A5D8AE;
-  --navbar-link-hover: #A5D8AE;
-  --results-bg: #263A26;
-  --sidebar-phrase-text-color: #A5D8AE;
-  --mark-color: rgba(165, 216, 174, 0.47);
-  --case-studies-numbered-list-color: #A5D8AE;
-
-
-
-  --color-text-muted: #b0b0b0;
-  --color-bg: #1a1a1a;
-  --color-bg-alt: #252525;
-  --color-border: #404040;
-  --color-accent: #263A26;
-  --color-accent-light: #1a251a;
-  --color-accent-hover: #A5D8AE;
-
-  --srch-brown: #263A26;
-  --sidebar-bg: #1e1e1e;
-
-  --cs-brown: #263A26;
-  --cs-text: #e0e0e0;
-  --cs-bg: #1e1e1e;
-  --cs-active: #2a3a2a;
-  --cs-divider: #404040;
-
-  --navbar-bg: #252525;
-  --navbar-border: #404040;
-  --navbar-shadow: rgba(0, 0, 0, 0.3);
-  --dropdown-bg: #2d2d2d;
-  --icon-color: #e0e0e0;
-  --search-bg: #2d2d2d;
-  --search-result-hover: rgba(165, 216, 174, 0.1);
-
-  --color-red-accent: #A5D8AE;
-}
 
 /* ------ general styles ------- */
 a {
@@ -294,7 +197,7 @@ h3 {
 }
 
 h4 {
-  color: var(--case-studies-numbered-list-color);
+  color: var(--connect-link);
 }
 
 /* ==========================================================================
@@ -401,7 +304,7 @@ h4 {
 .top-navbar .nav-link:hover,
 .top-navbar .nav-button:hover,
 .top-navbar .chakra-text:hover {
-  color: var(--navbar-link-hover);
+  color: var(--connect-link);
 }
 
 .navbar-padding {
@@ -457,7 +360,7 @@ h4 {
 
 .nav-dropdown-title:hover,
 .nav-dropdown-title:hover .nav-dropdown-title-text {
-  color: var(--color-accent-hover) !important;
+  color: var(--color-main) !important;
 }
 
 .nav-dropdown-title-text {
@@ -517,7 +420,7 @@ h4 {
 
 .nav-link-box:hover,
 .nav-link-box:hover .chakra-text {
-  color: var(--navbar-link-hover, #9d0013) !important;
+  color: var(--connect-link);
 }
 
 .mobile-menu-vstack {
@@ -626,13 +529,7 @@ h4 {
   margin-bottom: 0.25rem;
 }
 
-.navsearchbar-input::placeholder {
-  color: black;
-  opacity: 1;
-}
-
-/* Dark mode placeholder text */
-[data-theme="dark"] .navsearchbar-input::placeholder,
+.navsearchbar-input::placeholder,
 .chakra-ui-dark .navsearchbar-input::placeholder {
   color: var(--color-text) !important;
   opacity: 1;
@@ -656,42 +553,49 @@ h4 {
   border-color: inherit;
 }
 
-/* Dark mode styles for search input */
-[data-theme="dark"] .navsearchbar-input,
+.navsearchbar-input,
 .chakra-ui-dark .navsearchbar-input {
   color: var(--color-text) !important;
 }
 
-/* Dark mode styles for Chakra input class */
-[data-theme="dark"] .css-e94xtf,
+.css-e94xtf,
 .chakra-ui-dark .css-e94xtf {
   color: var(--color-text) !important;
 }
 
-.navsearchbar-button {
+/* Icon buttons (search & theme toggle) */
+.navsearchbar-button,
+.icon-button {
   color: var(--search-icon-color);
+  transition: color 0.2s ease;
 }
 
-.navsearchbar-button:hover {
-  color: var(--search-icon-hover);
+.navsearchbar-button:hover,
+.icon-button:hover {
+  color: var(--connect-link) !important;
 }
 
-/* Chakra icon wrapper styling */
-.css-vhrm8d {
-  color: var(--search-icon-color);
+.navsearchbar-button svg,
+.icon-button svg {
+  color: inherit !important;
+  fill: currentColor !important;
 }
 
-/* Dark mode Chakra icon wrapper */
-[data-theme="dark"] .css-vhrm8d,
-.chakra-ui-dark .css-vhrm8d {
-  color: var(--search-icon-color) !important;
+.navsearchbar-button:hover svg,
+.icon-button:hover svg {
+  color: var(--connect-link) !important;
+  fill: currentColor !important;
 }
 
-/* Hover effects for Chakra icon wrapper */
-.navsearchbar-button:hover .css-vhrm8d,
-[data-theme="dark"] .navsearchbar-button:hover .css-vhrm8d,
-.chakra-ui-dark .navsearchbar-button:hover .css-vhrm8d {
-  color: var(--search-icon-hover) !important;
+/* Chakra icon wrapper */
+.navsearchbar-button .chakra-icon,
+.icon-button .chakra-icon {
+  color: inherit !important;
+}
+
+.navsearchbar-button:hover .chakra-icon,
+.icon-button:hover .chakra-icon {
+  color: var(--connect-link) !important;
 }
 
 /* ========================================================================== 
@@ -895,13 +799,14 @@ h4 {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  color: var(--color-text, #1a1a1a);
+  color: var(--color-text);
 }
 
-/* Dark mode text color for search snippets */
-[data-theme="dark"] .result-snippet-text,
-.chakra-ui-dark .result-snippet-text {
-  color: #ffffff !important;
+
+.chakra-ui-dark .css-vhrm8d,
+[data-theme="dark"] .css-vhrm8d {
+  color: var(--search-icon-color) !important;
+  fill: currentColor !important;
 }
 
 .result-snippet-text.clamped {
@@ -941,14 +846,14 @@ h4 {
 
 .view-all-link {
   cursor: pointer;
-  color: var(--color-accent);
+  color: var(--sub-header-text-color);
   text-decoration: underline;
   font-size: 0.875rem;
   outline: none;
 }
 
 .view-all-link:hover {
-  color: var(--color-accent-hover);
+  color: var(--color-main);
 }
 
 /* ========================================================================== 
@@ -1059,11 +964,11 @@ html:not(.right-open) body .main-content {
   overflow-wrap: anywhere;
   word-break: break-word;
   min-width: 0;
-  color: var(--sidebar-phrase-color);
+  color: var(--color-main);
 }
 
 .srch-drawer-link .chakra-text {
-  color: var(--sidebar-link-color);
+  color: var(--connect-link);
 }
 
 .srch-drawer-link.srch-drawer-link-active .chakra-text {
@@ -1093,7 +998,7 @@ html:not(.right-open) body .main-content {
   font-family: "Be Vietnam Pro", sans-serif !important;
   font-weight: 600 !important;
   font-size: 16px !important;
-  color: var(--srch-brown) !important;
+  color: var(--cs-brown) !important;
   padding: 10px 12px !important;
   background: var(--navbar-bg) !important;
   border-bottom: 1px solid var(--border-1) !important;
@@ -1146,7 +1051,7 @@ html:not(.right-open) body .main-content {
       .main-content uses margins equal to sidebar widths. */
 .page-divider {
   height: 2px;
-  background: var(--srch-brown, #531c00);
+  background: var(--cs-brown, #531c00);
   border: 0;
 
   /* Full-bleed within .main-content: cancel the .markdown-page padding */
@@ -1235,7 +1140,7 @@ html:not(.right-open) body .main-content {
 }
 
 .sidebar-toggle:focus-visible {
-  outline: 2px solid var(--color-red-accent, #9d0013);
+  outline: 2px solid var(--connect-link);
   outline-offset: 2px;
 }
 
@@ -1325,7 +1230,7 @@ p>.srch-drawer-link:first-child {
   /* Same red; only border appears + slight scale */
   color: var(--color-main, #9d0013) !important;
   text-decoration: none !important;
-  border-color: var(--sidebar-phrase-clicked);
+  border-color: var(--learn-more-hover-outline);
   transform: scale(1.01);
   font-weight: bold !important;
 }
@@ -1340,7 +1245,7 @@ p>.srch-drawer-link:first-child {
 .srch-drawer-link.srch-drawer-link-active {
   color: var(--sidebar-phrase-text-color);
   background: var(--sidebar-phrase-clicked-active);
-  border-color: var(--sidebar-phrase-clicked);
+  border-color: var(--learn-more-hover-outline);
   text-decoration: none;
   font-weight: bold;
 }
@@ -1358,7 +1263,7 @@ p>.srch-drawer-link:first-child {
 
 /* Ensure the Info icon inherits currentColor (turns white on active) */
 .srch-drawer-link .chakra-icon {
-  color: var(--sidebar-link-color);
+  color: var(--connect-link);
 }
 
 .srch-drawer-link.srch-drawer-link-active .chakra-icon {
@@ -1369,13 +1274,12 @@ p>.srch-drawer-link:first-child {
 a[href^="#user-content-fn-"],
 a[href^="#user-content-fnref-"],
 a[data-footnote-ref] {
-  color: var(--sidebar-link-color);
-  text-decoration-color: var(--sidebar-link-color);
+  color: var(--connect-link);
+  text-decoration-color: var(--connect-link);
 }
 
-/* Style for the info icon */
-svg[fill="currentColor"] {
-  color: var(--sidebar-link-color) !important;
+.main-content svg[fill="currentColor"] {
+  color: var(--connect-link);
 }
 
 .srch-drawer-link.srch-drawer-link-active .chakra-icon {
@@ -1387,20 +1291,20 @@ em,
 em a.chakra-link,
 span em,
 span em a.chakra-link {
-  color: var(--sidebar-link-color);
+  color: var(--connect-link);
   font-style: italic;
-  text-decoration-color: var(--sidebar-link-color);
+  text-decoration-color: var(--connect-link);
 }
 
 /* Style for citation links */
 .css-puuyny {
-  color: var(--sidebar-link-color) !important;
-  text-decoration-color: var(--sidebar-link-color) !important;
+  color: var(--connect-link) !important;
+  text-decoration-color: var(--connect-link) !important;
 }
 
 /* Style for icons next to case references */
 .css-1p7rw8r {
-  color: var(--sidebar-link-color) !important;
+  color: var(--connect-link) !important;
   width: 0.8em;
   height: 0.8em;
   display: inline-block;
@@ -1650,7 +1554,7 @@ html.right-open .right-sidebar {
 }
 
 .sidebar-toggle:focus-visible {
-  outline: 2px solid var(--color-red-accent, #9d0013);
+  outline: 2px solid var(--connect-link);
   outline-offset: 2px;
 }
 
